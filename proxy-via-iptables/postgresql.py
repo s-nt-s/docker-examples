@@ -2,6 +2,7 @@
 
 import psycopg2
 import logging
+import os
 
 
 class PostgreSQL:
