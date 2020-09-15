@@ -9,7 +9,7 @@ echo "Configuration:"
 echo "HTTP_PROXY=$HTTP_PROXY"
 PROXY=$(echo "$HTTP_PROXY" | cut -d/ -f 3)
 PROXY_SERVER=$(echo "$PROXY" | cut -d: -f 1)
-PROXY_PORT=$(echo "$PROXY" | cut -d: -f 1)
+PROXY_PORT=$(echo "$PROXY" | cut -d: -f 2)
 echo "PROXY_SERVER=$PROXY_SERVER"
 echo "PROXY_PORT=$PROXY_PORT"
 
