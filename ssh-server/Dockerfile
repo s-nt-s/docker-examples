@@ -2,7 +2,7 @@ FROM ubuntu:16.04
 
 # https://docs.docker.com/engine/examples/running_ssh_service/
 
-RUN apt-get update && apt-get install -y openssh-server nano curl python3-pip
+RUN apt-get update && apt-get install -y openssh-server nano curl iputils-ping python3-pip
 RUN mkdir /var/run/sshd
 RUN echo 'root:root' | chpasswd
 RUN sed -i 's/#*PermitRootLogin prohibit-password/PermitRootLogin yes/g' /etc/ssh/sshd_config
