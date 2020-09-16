@@ -8,6 +8,6 @@ if [ "$1" == "--rm" ]; then
   exit 0
 elif [ "$1" == "--build" ]; then
   docker build -t "${NAME}" .
-elif ! docker image inspect "${NAME}:latest" >/dev/null 2>&1;; then
+elif ! docker image inspect "${NAME}:latest" >/dev/null 2>&1; then
   docker build -t "${NAME}" .
 fi

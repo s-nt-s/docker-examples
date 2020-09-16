@@ -2,9 +2,9 @@ FROM ubuntu:16.04
 
 # https://docs.docker.com/engine/examples/running_ssh_service/
 
-RUN apt-get update && apt-get install -y openssh-server nano cifs-utils
+RUN apt-get update && apt-get install -y openssh-server nano
 RUN mkdir /var/run/sshd
-RUN echo 'root:example' | chpasswd
+RUN echo 'root:root' | chpasswd
 RUN sed -i 's/#*PermitRootLogin prohibit-password/PermitRootLogin yes/g' /etc/ssh/sshd_config
 
 # SSH login fix. Otherwise user is kicked off after login
